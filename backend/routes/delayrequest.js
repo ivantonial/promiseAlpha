@@ -21,7 +21,7 @@ module.exports = app => {
             }).then((response) => {
                 res.send(response);
             }).catch((response) => {
-                res.send(response);
+                res.status(504).send(response);
             });
         } else {
             timeout = setTimeout(() => {
